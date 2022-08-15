@@ -2,11 +2,21 @@
 
 	<head>
 
-		<title>hastebin</title>
+		<title>Paste</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="solarized_dark.css"/>
 		<link rel="stylesheet" type="text/css" href="application.css"/>
-
+		<meta property="og:title" content="Paste by Nogra" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" id="meta-url" content="https://www.paste.nogra.xyz/" />
+		<script>
+			document.querySelector('#meta-url').setAttribute('content', location.href)
+		</script>
+		<meta property="og:description" content="Save text or code and share them as a link with Paste, a free web-based pastebin service." />
+		<meta property="og:determiner" content="a" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:locale:alternate" content="en_GB" />
+		<meta property="og:site_name" content="Paste by Nogra" />
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="highlight.min.js"></script>
 		<script type="text/javascript" src="application.min.js"></script>
@@ -31,7 +41,7 @@
 			}, 1000);
 			// Construct app and load initial path
 			$(function() {
-				app = new haste('hastebin', { twitter: true });
+				app = new haste('Paste', { twitter: true });
 				handlePop({ target: window });
 			});
 		</script>
